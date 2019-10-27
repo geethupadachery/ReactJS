@@ -19,7 +19,7 @@ class DisplayStudentDetailsCopy extends Component {
   }
   componentDidMount() {
     fetch(
-      'https://ygnr0sm77e.execute-api.us-west-1.amazonaws.com/development/student/?username="google"'
+      'https://ygnr0sm77e.execute-api.us-west-1.amazonaws.com/production/student/?username="missileman"'
     )
       .then(Response => Response.json())
       .then(findresponse => {
@@ -53,7 +53,7 @@ class DisplayStudentDetailsCopy extends Component {
     console.log(this.state.studentData.name);
 
     let url =
-      "http://localhost:8080/studentadmissionapp/deleteobject/?fileName=" +
+      "http://www.geethupadachery.com:8080/studentadmissionapp/deleteobject/?fileName=" +
       this.state.studentData.name +
       "&username=" +
       this.state.studentData.username;
@@ -80,7 +80,8 @@ class DisplayStudentDetailsCopy extends Component {
     form_data.append("file", this.state.fileName);
     form_data.append("username", this.state.studentData.username);
 
-    let url = "http://localhost:8080/studentadmissionapp/updateobject";
+    let url =
+      "http://www.geethupadachery.com:8080/studentadmissionapp/updateobject";
     axios
       .put(url, form_data, {
         headers: {
@@ -89,6 +90,7 @@ class DisplayStudentDetailsCopy extends Component {
       })
       .then(res => {
         console.log(res.data);
+        alert("File Updated successfully");
       })
       .catch(err => console.log(err));
   };

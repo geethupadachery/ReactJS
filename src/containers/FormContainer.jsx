@@ -163,7 +163,8 @@ class FormContainer extends Component {
     form_data.append("file", this.state.fileName);
     form_data.append("username", this.state.newUser.username);
 
-    let url = "http://localhost:8080/studentadmissionapp/addobject";
+    let url =
+      "http://www.geethupadachery.com:8080/studentadmissionapp/addobject";
     axios
       .post(url, form_data, {
         headers: {
@@ -183,7 +184,7 @@ class FormContainer extends Component {
     console.log("userData.name" + userData.name);
 
     fetch(
-      "https://ygnr0sm77e.execute-api.us-west-1.amazonaws.com/development/student",
+      "https://ygnr0sm77e.execute-api.us-west-1.amazonaws.com/production/student",
       {
         method: "POST",
         body: JSON.stringify(userData),
