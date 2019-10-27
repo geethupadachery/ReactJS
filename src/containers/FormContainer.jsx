@@ -161,6 +161,7 @@ class FormContainer extends Component {
     console.log(this.state.name);
     let form_data = new FormData();
     form_data.append("file", this.state.fileName);
+    form_data.append("username", this.state.newUser.username);
 
     let url = "http://localhost:8080/studentadmissionapp/addobject";
     axios

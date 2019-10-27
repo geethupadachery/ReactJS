@@ -7,6 +7,7 @@ const StudentData = ({ studentData }) => {
       <br></br>
 
       <center>
+        <h3>Student View</h3>
         <h1> Applicant Information Form </h1>
       </center>
 
@@ -19,7 +20,7 @@ const StudentData = ({ studentData }) => {
             <th>LastName</th>
             <th>DateOfBirth</th>
             <th>Program Selected</th>
-            <th>File URL</th>
+
             <th>File Description</th>
             <th>File Upload Time</th>
           </tr>
@@ -32,7 +33,7 @@ const StudentData = ({ studentData }) => {
             <td>{studentData.lastName}</td>
             <td>{studentData.dateOfBirth}</td>
             <td>{studentData.programs}</td>
-            <td>{studentData.name}</td>
+
             <td>{studentData.fileDesc}</td>
             <td>{studentData.fileUploadTime}</td>
           </tr>
@@ -41,6 +42,10 @@ const StudentData = ({ studentData }) => {
           </tr>
         </tbody>
       </table>
+      <a href={StudentData.name}> Uploaded File</a>
+      <p>
+        <h5>Uploaded File URL{"   :       " + studentData.name}</h5>
+      </p>
     </div>
   );
 };

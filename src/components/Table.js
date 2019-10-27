@@ -6,7 +6,10 @@ const Table = ({ studentData }) => {
     <div>
       <br></br>
       <center>
-        <h1> List of Student Details </h1>
+        <h3>Admin View</h3>
+        <br></br>
+        <br></br>
+        <h1> Student Details </h1>
       </center>
       <table className="table">
         <thead>
@@ -28,12 +31,14 @@ const Table = ({ studentData }) => {
                   <td>{studentData.lastName}</td>
                   <td>{studentData.programs}</td>
                   <td>{studentData.name}</td>
+                                  
                 </tr>
               );
             })
           ) : (
             <tr>
-              <td colSpan="5">Loading...</td>
+               <td colSpan="5">Loading...</td>
+                          
             </tr>
           )}
         </tbody>
