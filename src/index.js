@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import App from "./App";
 import { render } from "react-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import FormContainer from "./containers/FormContainer";
 //import DisplayStudentDetails from "./containers/DisplayStudentDetails";
 /*import DisplayStudentDetailsCopy from "./containers/DisplayStudentDetailsCopy";*/
@@ -11,16 +14,21 @@ const styles = {
   textAlign: "center"
 };
 
-class App extends Component {
-  render() {
-    return (
-      <div className="col-md-6">
-        <h3> Student Admission Application </h3>
-
-        <Admin />
-      </div>
-    );
-  }
-}
+//class App extends Component {
+ReactDOM.render(
+  <Router>
+        
+    <App />
+        
+    <FormContainer />
+        
+    <DisplayStudentDetailsCopy />
+        
+    <Admin />
+      
+  </Router>,
+  document.getElementById("root")
+);
+//}
 
 render(<App />, document.getElementById("root"));

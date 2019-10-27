@@ -53,7 +53,7 @@ class DisplayStudentDetailsCopy extends Component {
     console.log(this.state.studentData.name);
 
     let url =
-      "http://www.geethupadachery.com:8080/studentadmissionapp/deleteobject/?fileName=" +
+      "http://54.241.137.64:8080/studentadmissionapp/deleteobject/?fileName=" +
       this.state.studentData.name +
       "&username=" +
       this.state.studentData.username;
@@ -80,8 +80,7 @@ class DisplayStudentDetailsCopy extends Component {
     form_data.append("file", this.state.fileName);
     form_data.append("username", this.state.studentData.username);
 
-    let url =
-      "http://www.geethupadachery.com:8080/studentadmissionapp/updateobject";
+    let url = "http://54.241.137.64:8080/studentadmissionapp/updateobject";
     axios
       .put(url, form_data, {
         headers: {

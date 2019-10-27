@@ -163,8 +163,7 @@ class FormContainer extends Component {
     form_data.append("file", this.state.fileName);
     form_data.append("username", this.state.newUser.username);
 
-    let url =
-      "http://www.geethupadachery.com:8080/studentadmissionapp/addobject";
+    let url = "http://54.241.137.64:8080/studentadmissionapp/addobject";
     axios
       .post(url, form_data, {
         headers: {
@@ -194,10 +193,13 @@ class FormContainer extends Component {
         }
       }
     ).then(response => {
-      response.json().then(data => {
-        console.log("Successful" + data);
-        alert("Submitted successfully");
-      });
+      response
+        .json()
+        .then(data => {
+          console.log("Successful" + data);
+          alert("Submitted successfully");
+        })
+        .then(() => this.props.history.push("/studentdata"));
     });
     //.then(() => this.props.history.push("/DisplayStudentDetailsCopy"));
   }
