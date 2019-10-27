@@ -30,8 +30,13 @@ const Table = ({ studentData }) => {
                   <td>{studentData.firstName}</td>
                   <td>{studentData.lastName}</td>
                   <td>{studentData.programs}</td>
-                  <td>{studentData.name}</td>
-                                  
+                  <td>
+                    <a href={studentData.name} download>
+                      Click to download
+                    </a>
+                     
+                  </td>
+                                 
                 </tr>
               );
             })
