@@ -19,7 +19,7 @@ class DisplayStudentDetailsCopy extends Component {
   }
   componentDidMount() {
     fetch(
-      'https://ygnr0sm77e.execute-api.us-west-1.amazonaws.com/development/student/?username="sam"'
+      'https://ygnr0sm77e.execute-api.us-west-1.amazonaws.com/development/student/?username="google"'
     )
       .then(Response => Response.json())
       .then(findresponse => {

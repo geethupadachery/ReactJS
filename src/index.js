@@ -17,7 +17,7 @@ class App extends Component {
       <div className="col-md-6">
         <h3> Student Admission Application </h3>
 
-        <DisplayStudentDetailsCopy />
+        <Admin />
       </div>
     );
   }
