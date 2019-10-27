@@ -32,7 +32,7 @@ const Table = ({ studentData }) => {
                   <td>{studentData.programs}</td>
                   <td>
                     <a href={studentData.name} download>
-                      Click to download
+                      {studentData.name}
                     </a>
                      
                   </td>
