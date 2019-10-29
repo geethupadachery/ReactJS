@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import StudentData from "../components/studentdata";
-import "bootstrap/dist/css/bootstrap.min.css";
+/*import "bootstrap/dist/css/bootstrap.min.css";*/
 import logo from "../assets/download.png";
 import Table from "../components/Table";
 import Button from "../components/Button";
